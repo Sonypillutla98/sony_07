@@ -41,6 +41,7 @@ class SparkDataTransformationJob:
         try:
             #check the delta table exists or not
             DeltaTable.forPath(spark, "s3://sony-stagingzone-batch07/delta_Table")
+            print("deltaTable exist.")
             self.delta_table_exists = True
         
         except:
