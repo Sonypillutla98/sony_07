@@ -1,6 +1,6 @@
 import json
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import split, concat_ws, sha2, col,lit,current_date, xxhash64
+from pyspark.sql.functions import split, concat_ws, sha2, col,lit,current_date, xxhash64, concat
 from pyspark.sql.types import DecimalType,datetime
 
 spark = SparkSession.builder.config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension").config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog").appName('myapp').getOrCreate()
